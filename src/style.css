@@ -1,0 +1,230 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: #000000;
+}
+
+body {
+  /* width: 100%; */
+  height: 100vh;
+  display: grid;
+  align-items: center;
+
+  --s: 100px;
+  --_g: #000000 90deg, rgba(255, 255, 255, 0.1) 0;
+
+  background: conic-gradient(from 90deg at 2px 2px, var(--_g)),
+    conic-gradient(from 90deg at 1px 1px, var(--_g));
+  background-size: var(--s) var(--s), calc(var(--s)) calc(var(--s));
+  /* mask-image: radial-gradient(rgba(0, 0, 0, 1) 40%, transparent 60%); */
+
+  font-family: "Poppins", sans-serif;
+  position: relative;
+}
+
+.mask {
+  background-color: #000000;
+  mask-image: radial-gradient(transparent 40%, rgba(0, 0, 0, 1) 60%);
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+}
+
+.container {
+  z-index: 100;
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card-wrap {
+  position: relative;
+  display: inline-table;
+  border-radius: 2rem;
+  padding: 2px;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    rgba(79, 60, 41, 1) 77%,
+    #9d7852 100%
+  );
+  transition: 500ms;
+}
+
+.card-wrap:hover {
+  background: #9d7852;
+}
+
+.card {
+  display: inline-table;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    #371d36 0%,
+    rgba(37, 20, 36, 1) 0%,
+    #000000 100%
+  );
+  color: white;
+  width: 12rem;
+  height: 8rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2rem;
+  /* margin-bottom: 8rem; */
+
+  -webkit-box-shadow: 0px 0px 138px 46px rgba(157, 119, 82, 0.26);
+  -moz-box-shadow: 0px 0px 138px 46px rgba(157, 119, 82, 0.26);
+  box-shadow: 0px 0px 138px 46px rgba(157, 119, 82, 0.26);
+  text-align: left;
+  transition: 500ms;
+}
+
+.card-wrap:hover .card {
+  -webkit-box-shadow: 0px 0px 138px 80px rgba(157, 119, 82, 0.26);
+  -moz-box-shadow: 0px 0px 138px 80px rgba(157, 119, 82, 0.26);
+  box-shadow: 0px 0px 138px 80px rgba(157, 119, 82, 0.26);
+}
+
+hr {
+  margin: 1rem 0;
+}
+
+.card > * {
+  margin-bottom: 0.5rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  width: 100%;
+  border: none;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.sitemap-icon {
+  margin: 0 10px;
+}
+
+.shop-wrapper {
+  margin-top: 8rem;
+  margin-bottom: 4rem;
+  /* background-color: gainsboro; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  /* min-width: clamp(20rem, 100vmin, 150vmin); */
+  gap: clamp(2rem, 2vmin, 5vmin);
+  transition: 500ms;
+}
+
+/* .shop-wrapper > * + * {
+  margin-left: 200px;
+} */
+
+.shop-wrapper li {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+
+.shop-wrapper li img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.shop-wrapper span {
+  margin-top: 1rem;
+  color: white;
+}
+
+.img-wrapper {
+  position: relative;
+  display: inline-table;
+  border-radius: 100%;
+  padding: 2px;
+  position: relative;
+  background: linear-gradient(
+    0deg,
+    #000000 0%,
+    rgba(79, 60, 41, 1) 77%,
+    #9d7852 100%
+  );
+  transition: 500ms;
+}
+
+.image {
+  background-color: #342831;
+  padding: 1rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 500ms;
+}
+
+.shop-wrapper li:hover .image {
+  -webkit-box-shadow: 0px 0px 138px 40px rgba(157, 119, 82, 0.26);
+  -moz-box-shadow: 0px 0px 138px 40px rgba(157, 119, 82, 0.26);
+  box-shadow: 0px 0px 138px 40px rgba(157, 119, 82, 0.26);
+  cursor: pointer;
+}
+
+.shop-wrapper li:hover .img-wrapper {
+  background: #9d7852;
+}
+
+.btn-shopsystem {
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: x-large;
+  padding: 1rem 2rem;
+  border-radius: 50px;
+  transition: 500ms;
+}
+
+.btn-shopsystem span {
+  opacity: 0.5;
+  transition: 500ms;
+}
+
+.btn-shopsystem:hover {
+  border: 3px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+.btn-shopsystem:hover span {
+  opacity: 1;
+}
+
+#paths {
+  z-index: 1;
+  position: absolute;
+  fill: none;
+  stroke: white;
+  width: 100%;
+}
